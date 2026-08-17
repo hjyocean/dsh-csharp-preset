@@ -1,0 +1,3 @@
+name: C# 专用模式
+description: SOLID + TDD + MVVM + WPF 固定设计模式（C#/.NET/WPF 桌面开发自动生效）：四层架构、依赖注入组合根、CommunityToolkit.Mvvm、xUnit 测试纪律与 Red-Green-Refactor 工作流；代码标识符与文案全应用中文化（除关键字与框架 API 名外）。
+

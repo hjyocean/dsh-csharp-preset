@@ -1,0 +1,14 @@
+# dsh-csharp-preset 的 profile 层（bundle patch）。
+#
+# 本层只挂载一个插件行：插件激活时把包内 presets/ 目录下的
+# csharp-solid-tdd-mvvm-wpf 预设同步到 $DSH_HOME/.agent-presets/，
+# 使预设出现在 Agent 预设列表中（含随附技能与模板）。
+#
+# 采用"启动同步"而非直接 patch agent-presets 的 roots，原因：
+#   1. patch 整行替换 config，多插件叠加会互相覆盖；本方案零冲突；
+#   2. 不依赖 pnpm/node_modules 目录布局，包内路径由插件自身解析；
+#   3. $DSH_HOME/.agent-presets 是 DSH 官方的预设家园目录，同步后
+#      预设的发现、切换、删除行为与手动创建完全一致。
+- insert:
+    - id: csharp-preset-sync
+      name: 'dsh-csharp-preset'

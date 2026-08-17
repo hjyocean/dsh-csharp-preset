@@ -1,0 +1,51 @@
+{
+  "name": "dsh-csharp-preset",
+  "version": "1.1.0",
+  "description": "C# 专用设计模式（SOLID + TDD + MVVM + WPF）Agent 预设插件：安装后自动把 csharp-solid-tdd-mvvm-wpf 预设同步到 $DSH_HOME/.agent-presets，随附完整技能与代码模板。",
+  "keywords": [
+    "deepseek",
+    "deepseek-harness",
+    "dsh",
+    "plugin",
+    "agent-preset",
+    "csharp",
+    "dotnet",
+    "wpf",
+    "mvvm",
+    "solid",
+    "tdd"
+  ],
+  "license": "MIT",
+  "type": "module",
+  "main": "./lib/index.js",
+  "exports": {
+    ".": {
+      "default": "./lib/index.js"
+    },
+    "./cordis.patch.yml": "./cordis.patch.yml",
+    "./package.json": "./package.json"
+  },
+  "files": [
+    "lib",
+    "presets",
+    "cordis.patch.yml",
+    "README.md",
+    "LICENSE"
+  ],
+  "dsh": {
+    "bundle": {
+      "patch": "./cordis.patch.yml"
+    }
+  },
+  "engines": {
+    "node": ">=22.0.0"
+  },
+  "peerDependencies": {
+    "@deepseek-ai/dsh-agent-presets": "^0.1.0-rc.6"
+  },
+  "peerDependenciesMeta": {
+    "@deepseek-ai/dsh-agent-presets": {
+      "optional": true
+    }
+  }
+}

@@ -1,0 +1,6 @@
+node_modules/
+.reasonix/
+*.log
+.DS_Store
+
+dsh-usage/
